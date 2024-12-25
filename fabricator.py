@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from bs4 import BeautifulSoup
 
-# Настройка драйвера (например, Chrome)
+# Настройка драйвера 
 driver = webdriver.Chrome()
 
 # Переход на страницу логина
@@ -25,7 +25,7 @@ driver.get('https://phab.voix.io/maniphest/query/BEKe.bqYbKOF/?after=19779')
 page_source = driver.page_source
 soup = BeautifulSoup(page_source, 'html.parser')
 
-# Пример: Получение элементов по классу 'your-class'
+# Пример: Получение элементов по классу 
 elements = soup.find_all(class_='phui-oi-link')
 
 # Отладка: Печать количества найденных элементов
@@ -41,5 +41,5 @@ for element in elements:
     text = element.text.split('.')[1]
     print(text)
 
-# Закрытие драйвера
+
 driver.quit()
